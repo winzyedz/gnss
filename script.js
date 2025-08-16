@@ -120,7 +120,17 @@ function plotGraph() {
     font: { color: "#000000ff" },
     shapes: []
   };
+
   Plotly.newPlot('graph', [traceSpeed, traceAccel, markerSpeed, markerAccel], layout);
+
+  // ✅ รีไซส์มือถืออัตโนมัติ
+  enableResponsivePlot();
+}
+
+function enableResponsivePlot() {
+  window.addEventListener('resize', () => {
+    Plotly.Plots.resize('graph');
+  });
 }
 
 function setBookmark() {
@@ -198,11 +208,11 @@ function screenshot() {
         let maxSpeed = Math.max(...data.speeds);
         let maxAccel = Math.max(...data.accel);
 
-         // ✅ ใส่เครดิตตรงนี้ก่อน
-            ctx.fillStyle = "black";
-            ctx.font = "20px sans-serif";
-            ctx.textAlign = "right";
-            ctx.fillText("Speed data log WNZY Project 2025 by WINZYEDZ", canvas.width - 20, canvas.height - 20);
+        // ✅ ใส่เครดิตตรงนี้
+        ctx.fillStyle = "black";
+        ctx.font = "20px sans-serif";
+        ctx.textAlign = "right";
+        ctx.fillText("Speed data log WNZY Project 2025 by WINZYEDZ", canvas.width - 20, canvas.height - 20);
 
         ctx.fillStyle = "black";
         ctx.font = "18px sans-serif";
@@ -218,3 +228,5 @@ function screenshot() {
       };
     });
 }
+
+
