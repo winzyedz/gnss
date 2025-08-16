@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GNSS Viewer Tutorial</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* ✅ ฟอนต์ WhatsApp */
+body {
+  background-color: #0b1014;
+  color: #fff;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.step {
+  margin-bottom: 40px;
+}
+
+.step video {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.caption {
+  margin-top: 10px;
+  font-size: 16px;
+  background-color: #264b39;
+  padding: 8px;
+  border-radius: 4px;
+  word-wrap: break-word;
+}
+
+/* ✅ Media Query สำหรับมือถือ */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .caption {
+    font-size: 14px;
+  }
+}
+
+/* ✅ Footer ให้เต็มความกว้างและเหมือน index */
+footer {
+  background: #1f1f1f;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Tutorial GNSS Viewer</h1>
+
+    <div class="step">
+        <video src="step1.webm" autoplay loop muted></video>
+        <div class="caption">Step 1: Download the GNSS Viewer app and open it. After that, tap Settings and configure everything according to the video.</div>
+    </div>
+
+    <div class="step">
+        <video src="step2.webm" autoplay loop muted></video>
+        <div class="caption">Step 2: Go back to the GNSS screen, then tap the trash bin icon and confirm to reset the system's recorded data. If done correctly, the Distance value should be 0 km.</div>
+    </div>
+
+    <div class="step">
+        <video src="step3.webm" autoplay loop muted></video>
+        <div class="caption">
+Step 3: Tap the Start Recording button. When recording with this app, you must keep it open at all times during the process. Do not exit the app or turn off the screen, otherwise it will stop recording data during the test. If done correctly, the Record button should blink green as shown in the video.<br><br>
+Note: The word “Sats” indicates the number of satellites your phone is currently tracking. The more satellites it locks onto, the more accurate the data will be. However, accuracy still depends on your phone’s receiver and the surrounding environment during testing.
+</div>
+    </div>
+
+    <div class="step">
+        <video src="step4.webm" autoplay loop muted></video>
+        <div class="caption">Step 4: After testing your vehicle, tap the Record button again — the green light will stop blinking. Next, tap Maps, then tap the GPX button. You can share and save this file anywhere you like. That’s it — you now have a .gpx file ready for upload.</div>
+    </div>
+</div>
+
+<footer>
+  © 2025 WNZY PROJECT BY WINZYEDZ
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WNZY Speed Graph</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>WNZY Project</h1>
+    <nav>
+      <button onclick="window.location.href='tutorial.html'">📖 Tutorial</button>
+      <button onclick="document.getElementById('fileInput').click()">📂 Upload .GPX</button>
+      <button onclick="screenshot()">🖼️ Print Screen</button>
+      <input type="file" id="fileInput" accept=".gpx" style="display:none" onchange="handleFile(event)">
+    </nav>
+  </header>
+
+  <main>
+    <section id="upload-section">
+      <h2>Speed & Acceleration (Playback)</h2>
+      <div id="graph-container">
+        <div id="graph"></div>
+      </div>
+
+      <div class="controls">
+        <button onclick="play()">▶ Play</button>
+        <button onclick="pause()">⏸ Pause</button>
+        <button onclick="reset()">⏮ Reset</button>
+      </div>
+
+      <div class="bookmark">
+        Start (s): <input type="number" id="startInput" step="0.1">
+        End (s): <input type="number" id="endInput" step="0.1">
+        <button onclick="setBookmark()">🔖 Bookmark</button>
+      </div>
+
+      <p id="status" class="status"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 WNZY PROJECT BY WINZYEDZ</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

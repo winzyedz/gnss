@@ -1,0 +1,108 @@
+body {
+  background: #0b1014;
+  color: #fff;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* ฟอนต์ WhatsApp */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: #161f27;
+  padding: 15px;
+  text-align: center;
+}
+
+nav {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  background: #5cbd6c; /* สีเขียว WhatsApp */
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-family: inherit; /* ป้องกันปุ่มใช้ฟอนต์อื่น */
+}
+button:hover {
+  background: #25b359;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#upload-section {
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* ✅ ทำให้กราฟเป็น 16:9 เสมอ */
+#graph-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 = 9/16 = 0.5625 */
+  background: #202020;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+#graph {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.controls, .bookmark {
+  margin: 10px 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.status {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+footer {
+  background: #1f1f1f;
+  text-align: center;
+  padding: 15px;
+}
+
+/* ✅ Media Query สำหรับมือถือ */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    width: 100%;
+    max-width: 300px;
+    font-size: 16px;
+  }
+
+  .controls, .bookmark {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .status {
+    font-size: 16px;
+  }
+}
