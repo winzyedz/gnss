@@ -110,18 +110,23 @@ function plotGraph() {
     marker: { size: 10, color: 'orange' },
     yaxis: 'y2'
   };
+
   layout = {
     title: 'Speed and Acceleration Over Time',
-    xaxis: { title: 'Time (s)' },
-    yaxis: { title: 'Speed (km/h)', side: 'left' },
-    yaxis2: { title: 'Acceleration (m/s²)', overlaying: 'y', side: 'right' },
+    autosize: true,
+    responsive: true,
+    xaxis: { title: 'Time (s)', automargin: true },
+    yaxis: { title: 'Speed (km/h)', side: 'left', automargin: true },
+    yaxis2: { title: 'Acceleration (m/s²)', overlaying: 'y', side: 'right', automargin: true },
+    margin: { l: 50, r: 50, t: 50, b: 50 },
     paper_bgcolor: "#ffffffff",
     plot_bgcolor: "#ffffffff",
     font: { color: "#000000ff" },
     shapes: []
   };
 
-  Plotly.newPlot('graph', [traceSpeed, traceAccel, markerSpeed, markerAccel], layout);
+  Plotly.newPlot('graph', [traceSpeed, traceAccel, markerSpeed, markerAccel], layout, {responsive: true});
+
 
   // ✅ รีไซส์มือถืออัตโนมัติ
   enableResponsivePlot();
@@ -228,5 +233,3 @@ function screenshot() {
       };
     });
 }
-
-
